@@ -1,0 +1,19 @@
+# Disable autoindex
+Options -Indexes
+
+RewriteBase /
+
+#php_flag display_errors 1
+
+RewriteEngine On
+
+RewriteRule ^api/([^/]+)/? api/index.php?url=$1 [L,QSA]
+RewriteRule ^bdmailer/([^/]+)/? bdmailer/index.php?action=$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#6 Establish a custom 404 page not found ----
+
+ErrorDocument 404 /404

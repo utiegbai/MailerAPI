@@ -266,15 +266,15 @@ class Utility {
             //Server settings
             $mail->SMTPDebug = 0;                                 // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
-            $mail->Host = 'premium43.web-hosting.com';  // Specify main and backup SMTP servers
+            $mail->Host = '';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'notifications@builddigitalempire.com';                 // SMTP username
-            $mail->Password = 'Log%b;=_0pen#';                           // SMTP password
+            $mail->Username = 'notifications@example.com';                 // SMTP username
+            $mail->Password = '';                           // SMTP password
             $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 465;                                    // TCP port to connect to
 
             //Recipients
-            $mail->setFrom('notifications@builddigitalempire.com', 'Company Name');
+            $mail->setFrom('notifications@example.com', 'Company Name');
             //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
             $mail->addAddress($recipient);               // Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
